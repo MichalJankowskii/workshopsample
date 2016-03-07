@@ -1,0 +1,28 @@
+{
+  "version": "1.0.0-*",
+  "compilationOptions": {
+    "emitEntryPoint": true
+  },
+
+  "dependencies": {
+    "NETStandard.Library": "1.0.0-rc2-23819",
+    "Microsoft.NETCore.Platforms": "1.0.1-rc3-23903",
+    "Microsoft.AspNetCore.IISPlatformHandler": "1.0.0-rc2-16276",
+    "Microsoft.AspNetCore.Server.Kestrel": "1.0.0-rc2-16448",
+    "Microsoft.AspNetCore.StaticFiles": "1.0.0-rc2-16285",
+    "Microsoft.AspNetCore.Routing": "1.0.0-rc2-16325",
+    "Microsoft.AspNetCore.Mvc": "1.0.0-rc2-17116",
+    "Microsoft.Extensions.Logging.Console": "1.0.0-rc2-16119",
+    "Microsoft.AspNetCore.Diagnostics": "1.0.0-rc2-16612",
+    "Microsoft.Extensions.Logging.Debug": "1.0.0-rc2-16119"
+  },
+
+  "commands": {
+    "workshopFinal": "workshopFinal",
+    "web": "workshopFinal"
+  },
+
+  "frameworks": {
+    "dnxcore50": { }
+  }
+}
