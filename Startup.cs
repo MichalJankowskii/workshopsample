@@ -7,28 +7,29 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.PlatformAbstractions;
 using System;
 using System.Threading.Tasks;
-using workshopFinal.Middleware;
-using workshopFinal.Services;
 
-public class Startup
+namespace ConsoleApplication
 {
-
-    public void ConfigureServices(IServiceCollection services)
+    public class Startup
     {
-        services.AddRouting();
-        services.AddMvc();
-    }
 
-    public void Configure(IApplicationBuilder app)
-    {
-        app.UseIISPlatformHandler();
+        public void ConfigureServices(IServiceCollection services)
+        {
+            services.AddRouting();
+            services.AddMvc();
+        }
 
-        app.UseStaticFiles();
+        public void Configure(IApplicationBuilder app)
+        {
+            app.UseIISPlatformHandler();
 
-        var routeBuilder = new RouteBuilder(app);
+            app.UseStaticFiles();
 
-        routeBuilder.MapGet("", context => context.Response.WriteAsync("Hello from Routing!"));
+            var routeBuilder = new RouteBuilder(app);
 
-        app.UseRouter(routeBuilder.Build());
+            routeBuilder.MapGet("", context => context.Response.WriteAsync("Hello from Routing!"));
+
+            app.UseRouter(routeBuilder.Build());
+        }
     }
 }
